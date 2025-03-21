@@ -1,0 +1,137 @@
+body {
+    margin: 0;
+    height: 100vmin;
+    width: 100%;
+    background-image: url("../images/itg/background.jpg");
+    text-align: center;
+    display: grid;
+    grid-row-gap: 5%;
+    grid-template-rows: 10% 25% 25% 60%;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+#super {
+    vertical-align: super;
+    font-size: smaller;
+}
+
+nav {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+nav > div {
+    height: 100%;
+    align-items: center;
+    gap: 1.5vmin;
+    display: flex;
+}
+
+nav > h1 {
+    margin: 0;
+    padding: 1.5vmin 0;
+    color: rgb(255, 255, 255);
+    font-size: 3.5rem;
+}
+
+.navButton {
+    height: 100%;
+    padding: 1vmin 1.5vmin;
+    background-color: rgba(255, 255, 255, 0);
+    color: rgb(255, 255, 255);
+    font-size: 2rem;
+    cursor: pointer;
+    border: 0;
+}
+
+.navButton:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.navButton:active {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.middle-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.split {
+    display: grid;
+    width: 80%;
+    grid-template-columns: 50% 50%;
+    grid-gap: 5%;
+    align-items: center;
+    justify-content: center;
+}
+
+.split > div {
+    height: 20vmin;
+    padding: 1.5vmin 3vmin;
+    color: rgba(220, 220, 220, 1);
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.game {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 100%;
+}
+
+.game-row {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+}
+
+.game-row > iframe {
+    border: solid 1.5vmin rgba(0, 0, 0, 0.3);
+}
+
+.game-row > .controls {
+    margin: 0;
+    width: 85%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    list-style-type: none;
+    padding: 5vmin 2vmin;
+    background-color: rgba(0, 0, 0, 0.3);
+    color: rgba(220, 220, 220, 1);
+}
+
+.game-row > .controls > li {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.controls > li > img {
+    height: 5vmin;
+    width: auto;
+}
+
+.Repo-Button {
+    margin: 2vmin 0vmin;
+    padding: 2vmin 5vmin;
+    background-color: rgba(0, 0, 0, 0.3);
+    color: rgba(220, 220, 220, 1);
+    cursor: pointer;
+    font-weight: bolder;
+    border: none
+}
+
+.Repo-Button:hover {
+    background-color: rgba(10, 10, 10, 0.4);
+}
+
+.Repo-Button:active {
+    background-color: rgba(20, 20, 20, 0.4);
+}

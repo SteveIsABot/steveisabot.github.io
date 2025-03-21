@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ITG Project</title>
+    <link rel="stylesheet" href="../styles/infiniteTerrainGen.css">
+  </head>
+  <body>
+    
+    <nav>
+        <button class="navButton" onclick="location.href='http://steveisabot.github.io/';">Home</button>
+        <h1>Infinite Terrain Generation</h1>
+        <div>
+          <button class="navButton" onclick="location.href='https://www.linkedin.com/in/shivam-khanna-a6864226b/';">LinkedIn</button>
+          <button class="navButton" onclick="location.href='https://github.com/SteveIsABot';">GitHub</button>
+        </div>
+    </nav>
+
+    <div class="middle-wrapper">
+      <div class="split">
+        
+        <div>
+          <h1>Stage 1 - Creation of Terrain Grids</h1>
+          <p>
+            Using a list of vertices and a list of triangles to create a simple grid of varying size.
+            The terrain is generated via a perlin noise algorthim to generate the height value for each vertex creating a bumpy surface.
+            The algorthim uses the world position of each vertex as parameters so each grid won't have gaps in between each other and look connected when placed together.
+          </p>
+        </div>
+
+        <div>
+          <h1>Stage 2 - Placing of terrain grid</h1>
+          <p>
+            Assuming there are no other grids in the world the first terrain grid is always placed underneth the camera.
+            From that grid we find the next potential place where I can place another terrain grid.
+            The next potential place for a grid to spawn needs to be in the camera view, and next to another terrain grid.
+            If there is terrain grids that already exsit in world then the algorthim searches for the furtherest away terrain grid.
+            From that terrain grid it trys to find other potential spawn points for new terrain grids.
+          </p>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="middle-wrapper">
+      <div class="split">
+
+        <div>
+          <h1>Stage 3 - Applying colour to terrain grid</h1>
+          <p>
+            The terrain grid sends a colour gradient as a texture to be sampled from.
+            It also receives the lowest and highest hight of the terrain to create a height percentage for each vertex.
+            The shader samples the texture (The colour gradient) based on it's height percentage in the world creating a colour blend for the terrain grid.
+            Each terrain grid has the same gradient applied to it since the all terrain grids will have varying vertices heights.
+          </p>
+        </div>
+        
+        <div>
+          <h1>Stage 4 - Applying texture to terrain grid</h1>
+          <p>
+            The terrain grid sends 4 textures, a list of start heights for each texture, scale for each texture and bledning for each texture to the shader.
+            These textures are applied based of the height percentage of each vertex and scale of for texture.
+            Since there are 4 textures being applied each vertex is checked 4 times to see apply each texture correctly.
+            The shader logic was primarly based of this video: <a href="https://www.youtube.com/watch?v=XjH-UoyaTgs&list=PLFt_AvWsXl0eBW2EiBtl_sxmDtSgZBxB3&index=17">Procedural Landmass Generation by Sebastian Lague</a>
+          </p>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="middle-wrapper">
+      <div class="game">
+        
+        <div class="game-row">
+          <iframe src="../unity-builds/infiniteTerrainGenWeb/itgWeb.html" title="ITG Simulation" width="750" height="450" scrolling="no"></iframe>
+        </div>
+        
+        <div class="game-row">
+          <ul class="controls">
+            <li> <img src="../images/icons/WASD-Icon-T.png"/> Move around</li>
+            <li> <img src="../images/icons/Mouse-Icon-T.png"/> Look around </li>
+            <li> <img src="../images/icons/Space-Icon-T.png"/> Fly up </li>
+            <li> <img src="../images/icons/LSHIFT-Icon-T.png"/> Fly down </li>
+            <li> <img src="../images/icons/LCTRL-Icon-T.png"/> Speed up </li>
+            <li> <img src="../images/icons/Mouse-Left-Click-Icon-T.png"/> Interact with menu </li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="middle-wrapper">
+      <button class="Repo-Button" onclick="location.href='https://github.com/SteveIsABot/InfiniteTerrainGeneration';">GitHub Repo Link</button>
+    </div>
+
+  </body>
+</html>
