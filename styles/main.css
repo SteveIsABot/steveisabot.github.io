@@ -33,7 +33,6 @@ nav > h1 {
     margin: 0;
     padding: 1.5vmin 0;
     color: rgba(255, 255, 255, 0.8);
-    font-size: 3.5rem;
 }
 
 .navButton {
@@ -41,7 +40,6 @@ nav > h1 {
     padding: 1vmin 1.5vmin;
     background-color: rgba(255, 255, 255, 0);
     color: rgba(255, 255, 255, 0.8);
-    font-size: 2rem;
     cursor: pointer;
     border: 0;
 }
@@ -105,101 +103,66 @@ nav > h1 {
 
 .project-tile:active { background-color: rgba(255, 255, 255, 0.3); }
 
-@media only screen and (min-width: 960px) {
-    nav > h1 { font-size: 2rem; }
-    .navButton { font-size: 1.2rem; }
-
-    .PS-container > p { font-size: 1.1rem; }
-    .PS-container > h1 { font-size: 1.9rem; }
-    
-    #super { font-size: 0.9rem; }
-    .project-tile > p { font-size: 0.9rem; }
-    .project-tile > h1 { font-size: 1.4rem; }
-}
-
-@media only screen and (min-width: 1440px) {
-    nav > h1 { font-size: 3rem; }
-    .navButton { font-size: 1.5rem; }
-
-    .PS-container > p { font-size: 1.3rem; }
-    .PS-container > h1 { font-size: 2.5rem; }
-
-    #super { font-size: 1.1rem; }
-    .project-tile > p { font-size: 1.1rem; }
-    .project-tile > h1 { font-size: 1.8rem; }
-}
-
-@media only screen and (min-width: 2000px) {
-    nav > h1 { font-size: 4rem; }
-    .navButton { font-size: 2.5rem; }
-
-    .PS-container > p { font-size: 2rem; }
-    .PS-container > h1 { font-size: 4rem; }
-
-    #super { font-size: 1.5rem; }
-    .project-tile > p { font-size: 1.5rem; }
-    .project-tile > h1 { font-size: 2.8rem; }
-}
-
-@media only screen and (max-device-width: 480px) {
+@media ((min-width: 320px) and (orientation: portrait)) {
     body { height: 100vmax; }
 
-    nav > h1 { font-size: 1.8rem; }
-    .navButton { font-size: 1.2rem; }
+    nav > h1 { font-size: 1.3rem; }
+    .navButton { font-size: 0.8rem; }
 
-    .PS-container > p { font-size: 1rem; }
-    .PS-container > h1 { font-size: 1.6rem; }
-
-    #super { font-size: 0.7rem; }
-    .project-tile > p { font-size: 0.7rem; }
-    .project-tile > h1 { font-size: 1rem; }
-}
-
-@media only screen and (device-width: 768px) {
-    body { height: 100vmax; }
-
-    nav > h1 { font-size: 2.2rem; }
-    .navButton { font-size: 1.5rem; }
-
-    .PS-container > p { font-size: 1.1rem; }
-    .PS-container > h1 { font-size: 1.7rem; }
-
-    #super { font-size: 0.9rem; }
-    .project-tile > p { font-size: 0.9rem; }
-    .project-tile > h1 { font-size: 1.3rem; }
-}
-
-@media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:portrait) {
-    body { 
-        width: 100vmin;
-        height: 100vmax;
-    }
-
-    nav > h1 { font-size: 2rem; }
-    .navButton { font-size: 1.2rem; }
-
-    .PS-container { grid-template-rows: 25% 75%;}
-    .PS-container > p { font-size: 1.1rem; }
-    .PS-container > h1 { font-size: 1.6rem; }
-
-    #super { font-size: 0.75rem; }
-    .project-tile > p { font-size: 0.75rem; }
-    .project-tile > h1 { font-size: 1.1rem; }
-}
-
-@media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:landscape) {
-    body { 
-        width: 100vmax;
-        height: 100vmin;
-    }
-
-    nav > h1 { font-size: 1.5rem; }
-    .navButton { font-size: 0.9rem; }
-
-    .PS-container > p { font-size: 0.8rem; }
     .PS-container > h1 { font-size: 1.2rem; }
+    .PS-container > p { font-size: 0.7rem; }
 
-    #super { font-size: 0.65rem; }
-    .project-tile > p { font-size: 0.65rem; }
-    .project-tile > h1 { font-size: 1rem; }
+    .project-tile > h1 { font-size: 0.8rem; }
+    .project-tile > p { font-size: 0.5rem; }
+    #super { font-size: 0.5rem; }
 }
+
+@media ((min-width: 320px) and (orientation: landscape)) {
+    body { height: 100vmin; }
+
+    nav > h1 { font-size: 1rem; }
+    .navButton { font-size: 0.8rem; }
+
+    .PS-container > h1 { font-size: 0.8rem; }
+    .PS-container > p { font-size: 0.5rem; }
+
+    .project-tile > h1 { font-size: 0.8rem; }
+    .project-tile > p { font-size: 0.5rem; }
+    #super { font-size: 0.5rem; }
+}
+
+@media (min-width: 768px) {
+    nav > h1 { font-size: 2rem; }
+    .navButton { font-size: 1.2rem; }
+
+    .PS-container > h1 { font-size: 1.4rem; }
+    .PS-container > p { font-size: 0.7rem; }
+    
+    .project-tile > h1 { font-size: 1.2rem; }
+    .project-tile > p { font-size: 0.7rem; }
+    #super { font-size: 0.7rem; }
+}
+
+@media (min-width: 992px) {
+    nav > h1 { font-size: 2.4rem; }
+    .navButton { font-size: 1.5rem; }
+
+    .PS-container > h1 { font-size: 1.5rem; }
+    .PS-container > p { font-size: 1rem; }
+    
+    .project-tile > h1 { font-size: 1.3rem; }
+    .project-tile > p { font-size: 1rem; }
+    #super { font-size: 1rem; }
+}
+
+@media (min-width: 1200px) {
+    nav > h1 { font-size: 2.8rem; }
+    .navButton { font-size: 1.8rem; }
+
+    .PS-container > h1 { font-size: 2rem; }
+    .PS-container > p { font-size: 1.2rem; }
+    
+    .project-tile > h1 { font-size: 1.6rem; }
+    .project-tile > p { font-size: 1.2rem; }
+    #super { font-size: 1.2rem; }
+ }
