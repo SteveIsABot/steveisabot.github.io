@@ -251,8 +251,8 @@ nav > h1 {
     .split > div > p { font-size: 1.4rem; }
 
     .game-row > iframe {
-        width: 1120px;
-        height: 700px;
+        width: 80vmax;
+        height: 60vmax;
     }
 
     .game-row > .controls {
