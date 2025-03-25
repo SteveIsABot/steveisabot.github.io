@@ -209,6 +209,30 @@ nav > h1 {
     .game-row > .controls { display: block; }
  }
 
-@media (min-width: 992px) { }
+@media (min-width: 992px) {
+    body {
+        width: 100vmax;
+        height: auto;
+        grid-template-rows: 10% 21% 21% 50%;
+    }
+
+    nav { width: 100vmax; }
+    nav > h1 { font-size: 1.7rem; }
+    .navButton { font-size: 1.2rem; }
+
+    .middle-wrapper { width: 100%; }
+    .split > div > h1 { font-size: 1.3rem; }
+    .split > div > p { font-size: 1rem; }
+
+    .game-row > iframe {
+        width: 80vmax;
+        height: 50vmax;
+    }
+
+    .game-row > .controls {
+        display: flex;
+        width: 90vmax;
+    }
+}
 
 @media (min-width: 1200px) { }
