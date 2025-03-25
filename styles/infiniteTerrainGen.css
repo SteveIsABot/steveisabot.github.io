@@ -186,7 +186,28 @@ nav > h1 {
     }
 }
 
-@media (min-width: 768px) { }
+@media (min-width: 768px) {
+    body {
+        width: 100vmin;
+        height: auto;
+        grid-template-rows: 10% 22% 22% 50%;
+    }
+
+    nav { width: 100vmin; }
+    nav > h1 { font-size: 1.5rem; }
+    .navButton { font-size: 1rem; }
+
+    .middle-wrapper { width: 100%; }
+    .split > div > h1 { font-size: 1.2rem; }
+    .split > div > p { font-size: 0.9rem; }
+
+    .game-row > iframe {
+        width: 80vmin;
+        height: 50vmin;
+    }
+
+    .game-row > .controls { display: block; }
+ }
 
 @media (min-width: 992px) { }
 
