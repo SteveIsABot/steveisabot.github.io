@@ -235,4 +235,35 @@ nav > h1 {
     }
 }
 
-@media (min-width: 1200px) { }
+@media (min-width: 1200px) {
+    body {
+        width: 100%;
+        height: auto;
+        grid-template-rows: 10% 22% 22% 50%;
+    }
+
+    nav { width: 100%; }
+    nav > h1 { font-size: 2.5rem; }
+    .navButton { font-size: 2rem; }
+
+    .middle-wrapper { width: 100%; }
+    .split > div > h1 { font-size: 2.2rem; }
+    .split > div > p { font-size: 1.4rem; }
+
+    .game-row > iframe {
+        width: 1120px;
+        height: 700px;
+    }
+
+    .game-row > .controls {
+        display: flex;
+        width: 85vmax;
+    }
+    .controls > li > img {
+        height: 3vmin;
+        width: auto;
+    }
+    .game-row > .controls > li { font-size: 1.4rem; }
+
+    .Repo-Button { font-size: 1.4rem; }
+}
