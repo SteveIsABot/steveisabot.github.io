@@ -18,5 +18,76 @@
         </div>
     </nav>
 
+    <div>
+        <h1>Features That I Conributed To</h1>
+        <ul>
+            <li>Form handling</li>
+            <li>Login/Registering System</li>
+            <li>CRUD methods for database</li>
+            <li>Security based on user access level</li>
+            <li>Data handling/storgae solution</li>
+            <li>Data transfer between front-end and back-end</li>
+        </ul>
+    </div>
+
+    <div>
+        <h1>Form handling & Registering</h1>
+        <p>
+            First check if feilds are empty.
+            Uses regex to check each feild meets certain criteria.
+            Checks if email and username already exisits in database.
+            Creates a new user and saves it to database.
+            Sends mail to email to confirm email.
+        </p>
+    </div>
+
+    <div>
+        <h1>Login System</h1>
+        <p>
+            First check if feilds are empty.
+            Uses regex to check each feild meets certain criteria.
+            Uses a one time password to fully login the user.
+            Logs user in, with certain access depending on there 'role'.
+            The user can also logout once they have logged in.
+        </p>
+    </div>
+
+    <div>
+        <h1>CRUD Methods</h1>
+        <p>
+            The users can create a complaint.
+            The admins can edit, update and delete complaint.
+            These complaints contain a location, date, image and description.
+        </p>
+    </div>
+
+    <div>
+        <h1>Security Level Access</h1>
+        <p>
+            Based on role of the currently logged in user they are allowed certain access.
+            If role is user they can only access the creation of complaints and home page.
+            If role is admin they can access the viewing of all complaints, and the editing and deletion of said complaints.
+            If user role trys to access the admin role they get denied.
+        </p>
+    </div>
+
+    <div>
+        <h1>Data handling/storage</h1>
+        <p>
+            All data is handled using SQLAlchemy, and so is stored locally.
+            Images are stored seperately, and the location of the images is stored with the complaint in a complaint table.
+            Images are stored locally in a file, this way it complies with modern database protocols.
+        </p>
+    </div>
+
+    <div>
+        <h1>Data transfer between front-end and back-end</h1>
+        <p>
+            Front-end sends data using JWT in a JSON format.
+            Back-end receives data and handles it based on request.
+            Back-end sends data via JWT and front-end then update based off feedback.
+        </p>
+    </div>
+
   </body>
 </html>
